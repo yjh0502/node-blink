@@ -1,0 +1,18 @@
+{
+    "name": "node-blink",
+    "description": "blink protocol implementation with node",
+    "main": "./lib/blink",
+    "author": "Jihyun Yu",
+    "version": "0.0.1",
+    "repository" : {
+        "type": "git",
+        "url": "http://github.com/yjh0502/node-blink.git"
+    },
+    "bugs": {
+        "url": "http://github.com/yjh0502/node-blink/issues"
+    },
+    "license" : [
+        "type": "BSD",
+        "url": "http://github.com/yjh0502/node-blink/raw/master/LICENSE"
+    ],
+}
