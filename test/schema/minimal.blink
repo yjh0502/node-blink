@@ -1,10 +1,10 @@
 namespace NS
 
 UnsignedInt32 = u32
-Enums = One/1 | Two/2 | Three/3
+@annot1="anoot1" Enums = @u32="anot with symbol" One/1 | Two/2 | Three/3
 
-Minimal/1 : NS:parent ->
-    u32 value,
+@annot2="annot" Minimal/1 : NS:parent ->
+    @annot="annot" u32 @annot="annot" value,
     string (ctype) stringwithtype,
     u32 opt?,
     u32[] seq,
