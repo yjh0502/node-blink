@@ -11,8 +11,8 @@
     "bugs": {
         "url": "http://github.com/yjh0502/node-blink/issues"
     },
-    "license" : [
-        "type": "BSD",
-        "url": "http://github.com/yjh0502/node-blink/raw/master/LICENSE"
-    ],
+    "devDependencies": {
+        "mocha": "*",
+        "async": "*"
+    }
 }

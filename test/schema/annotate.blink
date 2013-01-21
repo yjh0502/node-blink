@@ -1,0 +1,11 @@
+@doc="Annotation"
+Hello/1 -> string Greeting <- @annotated="true"
+
+@doc="Annotation"
+    "with multiple lines"
+Hello2/2 -> string Greeting
+
+@doc='Annotation' "asfd" 'asdf'
+    "with multiple lines"
+    'with two quotes alternatively'
+Hello2/2 -> string Greeting

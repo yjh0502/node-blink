@@ -1,0 +1,65 @@
+# A schema for encoding a blink schema in blink 
+
+namespace Blink
+
+GroupDecl / 16000 : Annotated ->
+  NsName Name, u64 Id
+
+GroupDef / 16001 : Annotated ->
+  NsName Name, u64 Id?, FieldDef [] Fields, NsName Super?
+
+FieldDef : Annotated ->
+  string Name, u32 Id?, TypeDef* Type, bool Optional
+
+Define / 16002 : Annotated ->
+  NsName Name, u32 Id?, TypeDef* Type
+
+TypeDef : Annotated
+
+Ref / 16003 : TypeDef ->
+  NsName Type
+
+DynRef / 16004 : TypeDef -> 
+  NsName Type
+
+Sequence / 16005 : TypeDef ->
+  TypeDef* Type
+
+String / 16006 : TypeDef ->
+  string ContentType?
+
+Enum / 16007 : TypeDef ->
+  Symbol [] Symbols
+
+Symbol : Annotated ->
+  string Name, i32 Value
+
+U8        / 16008 : TypeDef 
+I8        / 16009 : TypeDef
+U16       / 16010 : TypeDef
+I16       / 16011 : TypeDef
+U32       / 16012 : TypeDef
+I32       / 16013 : TypeDef
+U64       / 16014 : TypeDef
+I64       / 16015 : TypeDef
+F64       / 16016 : TypeDef
+Bool      / 16017 : TypeDef
+Decimal   / 16018 : TypeDef
+NanoTime  / 16019 : TypeDef
+MilliTime / 16020 : TypeDef
+Date      / 16021 : TypeDef
+TimeOfDay / 16022 : TypeDef
+Object    / 16023 : TypeDef
+
+SchemaAnnotation / 16024 ->
+  Annotation [] Annotations,
+  string Ns?
+
+Annotated ->
+  Annotation [] Annotations?
+
+Annotation ->
+  NsName Name, string Value
+
+NsName ->
+  string Ns?, string Name
