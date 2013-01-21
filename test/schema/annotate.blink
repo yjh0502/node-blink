@@ -1,5 +1,5 @@
 @doc="Annotation"
-Hello/1 -> string Greeting <- @annotated="true"
+Hello/1 -> string Greeting
 
 @doc="Annotation"
     "with multiple lines"

@@ -1,5 +1,7 @@
 namespace NS
 
+schema <- @author="Jihyun Yu"
+
 UnsignedInt32 = u32
 @annot1="anoot1" Enums = @u32="anot with symbol" One/1 | Two/2 | Three/3
 

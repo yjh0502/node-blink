@@ -12,8 +12,8 @@ describe('schema', function() {
             });
         });
 
-        it.only('test', function(done) {
-            schema.parse(base.get_test_schema('minimal'), done);
+        it('test', function(done) {
+            schema.parse(base.get_test_schema('types'), done);
         });
     });
 });
