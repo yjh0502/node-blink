@@ -1,5 +1,8 @@
 namespace NS
 
+UnsignedInt32 = u32
+Enums = One/1 | Two/2 | Three/3
+
 Minimal/1 : NS:parent ->
     u32 value,
     string (ctype) stringwithtype,
