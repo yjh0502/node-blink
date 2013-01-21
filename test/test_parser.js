@@ -2,7 +2,7 @@ var fs = require('fs'),
     assert = require('assert'),
     async = require('async');
 
-var blink = require('../lib/blink');
+var parser = require('../lib/parser');
 
 var schema_dir = './test/schema/';
 
@@ -29,12 +29,12 @@ describe('general', function() {
 describe('tokenize', function() {
     describe('#tokenize', function() {
         it('correctness', function(done) {
-            async.map(schemas, blink.tokenize, function(err, results) {
+            async.map(schemas, parser.tokenize, function(err, results) {
                 assert(err == null);
 
                 for(var i = 0; i < results.length; i++) {
                     var tokens = results[i];
-                    assert(blink.check_no_error(tokens));
+                    assert(parser.check_no_error(tokens));
                 }
 
                 done();
