@@ -1,0 +1,12 @@
+namespace NS
+
+Minimal/1 : NS:parent ->
+    u32 value,
+    string (ctype) stringwithtype,
+    u32 opt?,
+    u32[] seq,
+    Shape* dyn,
+    Shape*[] dynseq
+
+Second/2 ->
+    u32 value
