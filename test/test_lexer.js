@@ -6,8 +6,10 @@ var assert = require('assert'),
 var test_over = function(set) {
     for(var filename in set) {
         var schema = set[filename];
-        var tokens = lexer.tokenize(schema);
-        assert(lexer.check_no_error(tokens));
+        var tokens = lexer.tokenize(schema, function(err, data) {
+            assert.ifError(err);
+            assert(lexer.check_no_error(tokens));
+        });
     }
 }
 

@@ -5,7 +5,7 @@ var assert = require('assert'),
 
 describe('parser', function() {
     describe('#parse', function() {
-        it('correctness', function(done) {
+        it('valid cases', function() {
             for(var filename in base.schema_sets.valid) {
                 var file = base.schema_sets.valid[filename];
 
@@ -15,12 +15,28 @@ describe('parser', function() {
                     }
                 });
             }
-            done();
         });
 
-        it('test', function(done) {
-            parser.parse(base.get_test_schema('minimal'));
-            done();
+        it('invalid cases', function() {
+            for(var filename in base.schema_sets.valid) {
+                var file = base.schema_sets.valid[filename];
+
+                parser.parse(file, function(err, data) {
+                    if(!err) {
+                        assert(false, "Failed to detect invalid case " + file);
+                    }
+                });
+            }
         });
+
+/*
+        it('custom test', function() {
+            parser.parse(base.get_test_schema('duplicate_id'), function(err, data) {
+                if(err) {
+                    assert(false, "Failed to parse " +  err + ", " + err.stack);
+                }
+            });
+        });
+        */
     });
 });
