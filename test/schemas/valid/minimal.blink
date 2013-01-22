@@ -3,6 +3,10 @@ namespace NS
 schema <- @author="Jihyun Yu"
 
 UnsignedInt32 = u32
+SeconsUInt32 = NS:UnsignedInt32
+SingleEnum = | One
+NextEnum = One/1 | Two | Three/3
+
 @annot1="anoot1" Enums = @u32="anot with symbol" One/1 | Two/2 | Three/3
 
 @annot2="annot" Minimal/1 : NS:parent ->
@@ -15,3 +19,5 @@ UnsignedInt32 = u32
 
 Second/2 ->
     u32 value
+
+# ThirdEnum = string

@@ -3,19 +3,19 @@ var assert = require('assert'),
     base = require('./test_base'),
     lexer = require('../lib/lexer');
     
+var test_over = function(set) {
+    for(var filename in set) {
+        var schema = set[filename];
+        var tokens = lexer.tokenize(schema);
+        assert(lexer.check_no_error(tokens));
+    }
+}
+
 describe('tokenize', function() {
     describe('#tokenize', function() {
-        it('correctness', function(done) {
-            async.map(base.schemas, lexer.tokenize, function(err, results) {
-                assert(err == null);
-
-                for(var i = 0; i < results.length; i++) {
-                    var tokens = results[i];
-                    assert(lexer.check_no_error(tokens));
-                }
-
-                done();
-            });
+        it('correctness', function() {
+            test_over(base.schema_sets.valid);
+            test_over(base.schema_sets.invalid_parser);
         });
     });
 });

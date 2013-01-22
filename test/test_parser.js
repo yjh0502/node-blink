@@ -6,15 +6,21 @@ var assert = require('assert'),
 describe('parser', function() {
     describe('#parse', function() {
         it('correctness', function(done) {
-            async.map(base.schemas, parser.parse, function(err, results) {
-                assert(err == null);
+            for(var filename in base.schema_sets.valid) {
+                var file = base.schema_sets.valid[filename];
 
-                done();
-            });
+                parser.parse(file, function(err, data) {
+                    if(err) {
+                        assert(false, "Failed to parse " + file + ", " + err + ", " + err.stack);
+                    }
+                });
+            }
+            done();
         });
 
         it('test', function(done) {
-            parser.parse(base.get_test_schema('types'), done);
+            parser.parse(base.get_test_schema('minimal'));
+            done();
         });
     });
 });
