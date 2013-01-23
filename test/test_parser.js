@@ -11,7 +11,7 @@ describe('parser', function() {
 
                 parser.parse(file, function(err, data) {
                     if(err) {
-                        assert(false, "Failed to parse " + file + ", " + err + ", " + err.stack);
+                        assert(false, "Failed to parse " + filename + "\n" + err + ", " + err.stack);
                     }
                 });
             }

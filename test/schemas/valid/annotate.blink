@@ -8,4 +8,4 @@ Hello2/2 -> string Greeting
 @doc='Annotation' "asfd" 'asdf'
     "with multiple lines"
     'with two quotes alternatively'
-Hello2/2 -> string Greeting
+Hello3/3 -> string Greeting
