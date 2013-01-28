@@ -1,0 +1,7 @@
+One ->
+    u8 first,
+    Two second
+
+Two ->
+    u8 first,
+    One second

@@ -29,14 +29,12 @@ describe('parser', function() {
             }
         });
 
-/*
-        it('custom test', function() {
-            parser.parse(base.get_test_schema('duplicate_id'), function(err, data) {
+        it.only('custom test', function() {
+            parser.parse(base.get_test_schema('recursive_def'), function(err, data) {
                 if(err) {
                     assert(false, "Failed to parse " +  err + ", " + err.stack);
                 }
             });
         });
-        */
     });
 });

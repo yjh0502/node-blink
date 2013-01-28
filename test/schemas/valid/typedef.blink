@@ -1,0 +1,12 @@
+Uint8 = u8
+Uint16 = u16
+Uint32 = u32
+
+One ->
+    Uint8 first,
+    Uint16 second
+
+Two ->
+    Uint32 first,
+    One second,
+    Uint32 third

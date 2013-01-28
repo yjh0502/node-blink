@@ -1,0 +1,9 @@
+One/1 ->
+    string one,
+    date two
+
+Two/2 ->
+    u8 first,
+    One second,
+    One third,
+    u8 forth
