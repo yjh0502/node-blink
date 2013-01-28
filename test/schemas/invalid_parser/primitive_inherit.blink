@@ -1,0 +1,2 @@
+Foo = u32
+bar : Foo
