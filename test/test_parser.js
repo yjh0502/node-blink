@@ -30,7 +30,7 @@ describe('parser', function() {
         });
 
         it.only('custom test', function() {
-            parser.parse(base.get_test_schema('typedef'), function(err, data) {
+            parser.parse(base.get_test_schema('enum_ambiguous'), function(err, data) {
                 if(err) {
                     assert(false, "Failed to parse " +  err + ", " + err.stack);
                 }
