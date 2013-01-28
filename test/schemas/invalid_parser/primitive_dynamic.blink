@@ -1,0 +1,3 @@
+Foo = u32
+Bar ->
+    Foo* first
