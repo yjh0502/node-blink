@@ -11,7 +11,7 @@ describe('parser', function() {
 
                 parser.parse(file, function(err, data) {
                     if(err) {
-                        assert(false, "Failed to parse " + filename + "\n" + err + ", " + err.stack);
+                        assert(false, "Failed to parse " + filename + "\n" + err.stack);
                     }
                 });
             }
@@ -30,9 +30,10 @@ describe('parser', function() {
         });
 
         it.only('custom test', function() {
-            parser.parse(base.get_test_schema('enum_ambiguous'), function(err, data) {
+            var name = 'Blink';
+            parser.parse(base.get_test_schema(name), function(err, data) {
                 if(err) {
-                    assert(false, "Failed to parse " +  err + ", " + err.stack);
+                    assert(false, "Failed to parse\n" +  err.stack);
                 }
             });
         });
