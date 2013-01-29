@@ -3,5 +3,5 @@ namespace node_blink
 Sym = string
 
 Hello/1 -> 
-    string Greeting
+    string Greeting,
     node_blink:Sym WithNamespace

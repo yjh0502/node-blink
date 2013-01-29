@@ -29,13 +29,15 @@ describe('parser', function() {
             }
         });
 
+/*
         it.only('custom test', function() {
-            var name = 'Blink';
+            var name = 'namespace';
             parser.parse(base.get_test_schema(name), function(err, data) {
                 if(err) {
                     assert(false, "Failed to parse\n" +  err.stack);
                 }
             });
         });
+        */
     });
 });

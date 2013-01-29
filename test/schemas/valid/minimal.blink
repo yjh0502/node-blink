@@ -9,6 +9,9 @@ NextEnum = One/1 | Two | Three/3
 
 @annot1="anoot1" Enums = @u32="anot with symbol" One/1 | Two/2 | Three/3
 
+parent
+Shape
+
 @annot2="annot" Minimal/1 : NS:parent ->
     @annot="annot" u32 @annot="annot" value,
     string (ctype) stringwithtype,
