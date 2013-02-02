@@ -12,6 +12,7 @@ describe('cbit', function() {
             assert.equal(cbit.decode_unsigned(new Buffer('80808040', 'hex'), 0), 64);
             assert.equal(cbit.decode_unsigned(new Buffer('8080808040', 'hex'), 0), 64);
 
+
             assert.equal(cbit.decode_unsigned(new Buffer('a467', 'hex'), 0), 4711);
         });
     });
@@ -22,6 +23,9 @@ describe('cbit', function() {
             assert.equal(cbit.decode_signed(new Buffer('40', 'hex'), 0), -64);
             assert.equal(cbit.decode_signed(new Buffer('8040', 'hex'), 0), 64);
             assert.equal(cbit.decode_signed(new Buffer('db19', 'hex'), 0), -4711);
+
+            assert.equal(cbit.decode_signed(new Buffer('80ce10', 'hex'), 0), 10000);
+            assert.equal(cbit.decode_signed(new Buffer('7e', 'hex'), 0), -2);
 
             assert.equal(cbit.decode_signed(new Buffer('f880808000', 'hex'), 0), -2147483648);
             assert.equal(cbit.decode_signed(new Buffer('87c5b49f62', 'hex'), 0), 2024607714);
