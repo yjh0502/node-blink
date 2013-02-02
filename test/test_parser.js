@@ -31,7 +31,7 @@ describe('parser', function() {
 
 /*
         it.only('custom test', function() {
-            var name = 'namespace';
+            var name = 'Blink';
             parser.parse(base.get_test_schema(name), function(err, data) {
                 if(err) {
                     assert(false, "Failed to parse\n" +  err.stack);
